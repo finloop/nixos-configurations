@@ -6,11 +6,11 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    #emacs-overlay.url = "github:nix-community/emacs-overlay/master";
+    # emacs-overlay.url = "github:nix-community/emacs-overlay/master";
   };
 
   outputs =
-    inputs@{ self, nixpkgs, home-manager, nixos-hardware, emacs-overlay, ... }:
+    inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
