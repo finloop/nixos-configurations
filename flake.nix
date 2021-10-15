@@ -57,7 +57,7 @@
             ./modules/security.nix
             ./modules/virt.nix
             ./modules/cache.nix
-            ({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
+            #({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
           ];
         };
       };
