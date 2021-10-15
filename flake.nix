@@ -7,10 +7,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     # emacs-overlay.url = "github:nix-community/emacs-overlay/master";
+    nixpkgs-stable.url = "nixpkgs/nixos-21.05";
   };
 
   outputs =
-    inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }:
+    inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixpkgs-stable, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -34,7 +35,7 @@
 
       packages."${system}" = pkgs;
       nixosConfigurations = {
-        acer = lib.nixosSystem {
+        nixos = lib.nixosSystem {
           inherit system;
           modules = [
             ./hosts/base.nix
@@ -55,7 +56,7 @@
             ./modules/locale.nix
             ./modules/nix.nix
             ./modules/security.nix
-            ./modules/virt.nix
+            #./modules/virt.nix
             ./modules/cache.nix
             #({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
           ];
