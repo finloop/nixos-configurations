@@ -6,8 +6,6 @@
     autocd = true;
     dotDir = ".config/zsh";
     shellAliases = {
-      apollo = "ssh apollo";
-      mikrus = "ssh mikrus";
       g = "git";
       ping = "ping -c 3";
       space = "df -h -x tmpfs -x devtmpfs 2>& /dev/null";
@@ -16,7 +14,7 @@
       rm = "rm -I";
       ln = "ln -i";
       sysup =
-        "sudo nixos-rebuild switch --flake '/home/pg/Documents/nixos-configurations#'";
+        "sudo nixos-rebuild switch --flake '/home/pk/Documents/nixos-configurations#'";
     };
     dirHashes = {
       docs = "$HOME/Documents";

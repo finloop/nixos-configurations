@@ -22,7 +22,6 @@ in {
     pamixer
     alsa-utils
     spotify
-    firefox
     brave
   ];
   fonts.fonts = with pkgs; [ nerdfonts ];

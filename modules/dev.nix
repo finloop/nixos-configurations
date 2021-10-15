@@ -12,13 +12,6 @@
     git
     git-lfs
     sqlite
-    julia_16-bin
-    go
-    gocode
-    gomodifytags
-    gotests
-    gore
-    gopls
     R
     graphviz
     github-cli
@@ -37,7 +30,5 @@
     rclone
     wget
     curl
-    mono
-    dotnet-sdk_5
   ];
 }

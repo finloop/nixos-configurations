@@ -3,8 +3,8 @@
 {
   programs.git = {
     enable = true;
-    userName = "Patryk Gronkiewicz";
-    userEmail = "patryk@gronkiewicz.dev";
+    userName = "Piotr Krawiec";
+    userEmail = "piotr.krawiec23@gmail.com";
     aliases = {
       uncommit = "reset --soft HEAD";
       unstage = "reset";
@@ -29,15 +29,15 @@
       signByDefault = true;
     };
     extraConfig = {
-      github.user = "pgronkievitz";
-      gitlab.user = "pgronkievitz";
+      github.user = "finloop";
+      gitlab.user = "finloop";
       init.defaultBranch = "main";
     };
   };
   programs.gh = {
     enable = true;
     settings = {
-      editor = "emacs";
+      editor = "nvim";
       git_protocol = "ssh";
     };
   };

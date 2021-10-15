@@ -5,19 +5,19 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   imports = [
-    ./emacs.nix
+    #./emacs.nix
     ./alacrity.nix
     ./dunst.nix
     ./zathura.nix
     ./bat.nix
-    ./syncthing.nix
+    #./syncthing.nix
     ./lorri.nix
     ./lsd.nix
-    ./mpv.nix
+    #./mpv.nix
     ./fzf.nix
     ./neovim.nix
     ./redshift.nix
-    ./ssh.nix
+    #./ssh.nix
     ./git.nix
     ./zsh.nix
     ./rofi.nix
@@ -25,8 +25,8 @@ in {
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "pg";
-  home.homeDirectory = "/home/pg";
+  home.username = "pk";
+  home.homeDirectory = "/home/pk";
   # nixpkgs.overlays = [ (import "${emacs-overlay}") ];
 
   # This value determines the Home Manager release that your

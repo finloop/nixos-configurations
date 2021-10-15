@@ -1,12 +1,12 @@
 {
-  description = "pgronkievitz's config";
+  description = "finloops's config, based on: pgronkievitz's config";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    emacs-overlay.url = "github:nix-community/emacs-overlay/master";
+    #emacs-overlay.url = "github:nix-community/emacs-overlay/master";
   };
 
   outputs =
@@ -24,30 +24,30 @@
     in {
 
       homeManagerConfigurations = {
-        pg = home-manager.lib.homeManagerConfiguration {
+        pk = home-manager.lib.homeManagerConfiguration {
           inherit system pkgs;
-          username = "pg";
-          homeDirectory = "/home/pg";
-          configuration = { imports = [ ./users/pg/home.nix ]; };
+          username = "pk";
+          homeDirectory = "/home/pk";
+          configuration = { imports = [ ./users/pk/home.nix ]; };
         };
       };
 
       packages."${system}" = pkgs;
       nixosConfigurations = {
-        artemis = lib.nixosSystem {
+        acer = lib.nixosSystem {
           inherit system;
           modules = [
             ./hosts/base.nix
-            ./hosts/artemis/default.nix
-            nixos-hardware.nixosModules.system76
+            ./hosts/acer/default.nix
+            #nixos-hardware.nixosModules.system76
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.pg = import ./users/pg/home.nix;
+              home-manager.users.pk = import ./users/pk/home.nix;
             }
             ./modules/dev.nix
-            ./modules/games.nix
+            #./modules/games.nix
             ./modules/misc.nix
             ./modules/office.nix
             ./modules/python.nix
@@ -58,38 +58,8 @@
             ./modules/virt.nix
             ./modules/cache.nix
             ({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
-          ];
-        };
-        apollo = lib.nixosSystem {
-          inherit system;
-          modules = [ ./hosts/base.nix ]; # ./hosts/apollo/base.nix ];
-        };
-        themis = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./hosts/base.nix
-            ./hosts/themis/default.nix
-            ./modules/dev.nix
-            ./modules/misc.nix
-            ./modules/office.nix
-            ./modules/python.nix
-            ./modules/kube.nix
-            ./modules/locale.nix
-            ./modules/nix.nix
-            ./modules/security.nix
-            ./modules/virt.nix
-            ./modules/cache.nix
-            ./modules/boot.nix
-            ({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.pg = import ./users/pg/home.nix;
-            }
           ];
         };
       };
-
     };
 }
