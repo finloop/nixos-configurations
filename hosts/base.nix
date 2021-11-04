@@ -14,5 +14,6 @@
     extraGroups = [ "wheel" "video" "libvirtd" "podman" ];
     shell = pkgs.zsh;
     description = "Piotr Krawiec";
+    initialPassword = "nhy7*UJM";
   };
 }

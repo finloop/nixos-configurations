@@ -7,8 +7,7 @@
   ];
   networking = {
     hostName = "acer";
-    interfaces.enp4s0.useDHCP = true;
-    interfaces.wlp5s0.useDHCP = true;
+    interfaces.enp0s3.useDHCP = true;
   };
   hardware.bluetooth = {
     enable = true;
