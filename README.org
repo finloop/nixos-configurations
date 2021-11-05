@@ -1,30 +1,24 @@
-#+TITLE: pgronkievitz's dotfiles
-#+AUTHOR: Patryk Gronkiewicz
+#+TITLE: My NixOS configuration
+#+AUTHOR: Piotr Krawiec
 #+PROPERTY: header-args :tangle no :tangle-mode (identity #o444) :cache yes :results silent
 #+OPTIONS: broken-links:auto
 #+EXPORT_FILE_NAME: index.html
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
-[[https://img.shields.io/badge/Made_with-Doom_Emacs-blueviolet.svg]] [[https://img.shields.io/badge/NixOS-v21.11-blue.svg]]
 #+begin_center
 | *Shell*    | zsh        |
 | *DM*       | lightdm    |
-| *WM*       | qtile      |
-| *Editor*   | Doom Emacs |
+| *WM*       | qtile/plasma      |
+| *Editor*   | nvim |
 | *Terminal* | Alacritty  |
 | *Launcher* | rofi       |
-| *Browser*  | Firefox    |
+| *Browser*  | Brave    |
 #+end_center
 
-#+CAPTION: Nobody's gonna use my laptop!
-[[https://imgs.xkcd.com/comics/borrow_your_laptop.png]]
 
-This is my NixOS configuraiton. It's quite simple for now, but it'll be improved over time.
 * TODOs
 ** PROJ General
 *** TODO Move all of the configs into literates (preferably into this file)
-*** IDEA Consider moving to ZFS instead of BTRFS
-*** IDEA Consider [[https://grahamc.com/blog/erase-your-darlings?source=techstories.org][removing my darlings]]
 *** TODO Fix colors to be defined in one file instead of every themed app
 *** TODO Set up logging in with password + U2F key
 *** TODO Set up "panic password" which deletes all of =/home/=
@@ -32,17 +26,15 @@ This is my NixOS configuraiton. It's quite simple for now, but it'll be improved
 *** TODO Add qtile config into this directory to make it more manageable
 *** TODO set background with Nix
 ** PROJ Shell
-*** DONE configure ZSH via nix file
-**** KILL configure prezto
+*** TODO configure ZSH via nix file
 There's no use to use prezto
 *** DONE configure neovim
-*** DONE configure git
+*** TODO configure git
 *** DONE configure gh
-*** DONE configure ssh
+*** TODO configure ssh
 *** DONE configure lsd
 ** PROJ Emacs
-*** TODO Set up Emacs overlay as flake
-*** KILL Fix Emacs' service
+*** TODO Learn Emacs
 ** PROJ NixOS
 *** DONE Set up automatic GC with ~2 weeks of generations
 *** TODO Set up backups properly
