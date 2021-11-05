@@ -9,10 +9,11 @@
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.initrd.kernelModules = [ "nvidia" ];
+  boot.kernelModules = [ "kvm-amd" "nvidia_x11"];
   boot.extraModulePackages = [ ];
-
+  boot.blacklistedKernelModules = [ "nouveau" ];
+  boot.kernelParams = [ "pci=noats" ];
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/1afffb8f-6be8-4e1a-95f3-b98b9b598761";
       fsType = "ext4";
@@ -29,5 +30,7 @@
     };
 
   swapDevices = [ ];
+
+  hardware.system76.enableAll = true;
 
 }

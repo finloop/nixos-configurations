@@ -22,6 +22,8 @@
     freetube
     calibre
     spectacle
+    lshw
+    pciutils
   ];
 
 }
