@@ -14,7 +14,7 @@
     };
     windowManager.qtile.enable = true;
     layout = "pl";
-    xkbOptions = "caps:swapescape";
+    # xkbOptions = "caps:swapescape";
     libinput = {
       enable = true;
       touchpad = {

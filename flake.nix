@@ -40,8 +40,8 @@
           modules = [
             ./hosts/base.nix
             ./hosts/acer/default.nix
-            #nixos-hardware.nixosModules.system76
-            home-manager.nixosModules.home-manager
+            nixos-hardware.nixosModules.system76
+            #home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
