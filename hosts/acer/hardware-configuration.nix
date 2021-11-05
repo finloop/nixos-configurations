@@ -4,24 +4,30 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = [ ];
+  imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
+    ];
 
-  boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "sd_mod" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-label/NIXOS";
+    { device = "/dev/disk/by-uuid/1afffb8f-6be8-4e1a-95f3-b98b9b598761";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-label/NIXBOOT";
+    { device = "/dev/disk/by-uuid/FC36-C126";
       fsType = "vfat";
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/fb3e4d9e-cc7c-4781-a433-56e130256907";
+      fsType = "ext4";
     };
 
   swapDevices = [ ];
 
-  # virtualisation.virtualbox.guest.enable = true;
 }
