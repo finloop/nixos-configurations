@@ -24,6 +24,10 @@
     ignores = [ "*~" "*.swp" ];
     lfs.enable = true;
     delta.enable = true;
+    signing = {
+      key = "CE421BEF89DC7227";
+      signByDefault = true;
+    };
     extraConfig = {
       github.user = "finloop";
       gitlab.user = "finloop";
