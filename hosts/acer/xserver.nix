@@ -9,9 +9,12 @@ let
   '';
 in
 {
+  # NVIDIA DRIVERS AND OFFLOAD
   environment.systemPackages = [ nvidia-offload ];
   hardware.nvidia.modesetting.enable = false;
   hardware.nvidia.nvidiaPersistenced = true;
+
+  # XSERVER CONFIG
   services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
@@ -20,7 +23,7 @@ in
       plasma5.enable = true;
     };
     displayManager = {
-      lightdm.enable = true;
+      sddm.enable = true;
       defaultSession = "none+qtile";
     };
     windowManager.qtile.enable = true;
@@ -35,6 +38,8 @@ in
       mouse = { accelProfile = "flat"; };
     };
   }; 
+
+  # ENABLE NVIDIA PRIME
   hardware.nvidia.prime = {
     offload.enable = true;
     #sync.enable = true;
