@@ -24,6 +24,7 @@
     spectacle
     lshw
     pciutils
+    obsidian
   ];
 
 }
