@@ -11,7 +11,7 @@
   users.mutableUsers = true;
   users.users.pk = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "libvirtd" "podman" ];
+    extraGroups = [ "wheel" "video" "libvirtd" "podman" "vboxusers"];
     shell = pkgs.zsh;
     description = "Piotr Krawiec";
     initialPassword = "nhy7*UJM";
