@@ -6,12 +6,12 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    # emacs-overlay.url = "github:nix-community/emacs-overlay/master";
+    emacs-overlay.url = "github:nix-community/emacs-overlay/master";
     nixpkgs-stable.url = "nixpkgs/nixos-21.05";
   };
 
   outputs =
-    inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixpkgs-stable, ... }:
+    inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixpkgs-stable, emacs-overlay,... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -58,7 +58,7 @@
             ./modules/security.nix
             ./modules/virt.nix
             ./modules/cache.nix
-            #({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
+            ({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
           ];
         };
       };

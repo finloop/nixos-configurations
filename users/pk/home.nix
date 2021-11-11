@@ -5,7 +5,7 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   imports = [
-    #./emacs.nix
+    ./emacs.nix
     ./alacrity.nix
     ./dunst.nix
     ./zathura.nix
@@ -28,7 +28,6 @@ in {
   # paths it should manage.
   home.username = "pk";
   home.homeDirectory = "/home/pk";
-  # nixpkgs.overlays = [ (import "${emacs-overlay}") ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
