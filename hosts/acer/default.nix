@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
     ./xserver.nix
     ./audio.nix
-    #./backups.nix
+    ./backups.nix
   ];
   networking = {
     hostName = "acer";
