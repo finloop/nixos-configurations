@@ -14,6 +14,7 @@
   boot.extraModulePackages = [ ];
   boot.blacklistedKernelModules = [ "nouveau" ];
   boot.kernelParams = [ "pci=noats" ];
+  boot.supportedFilesystems = [ "ntfs" ];
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/1afffb8f-6be8-4e1a-95f3-b98b9b598761";
       fsType = "ext4";
