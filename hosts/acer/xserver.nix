@@ -21,6 +21,7 @@ in
     desktopManager = { 
       xterm.enable = false;
       plasma5.enable = true;
+      plasma5.runUsingSystemd = true;
     };
     displayManager = {
       sddm.enable = true;

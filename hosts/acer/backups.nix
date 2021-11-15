@@ -3,6 +3,6 @@
 {
   services.duplicati = {
     enable = true;
-    user = "pk";
+    user = "root";
   };
 }
