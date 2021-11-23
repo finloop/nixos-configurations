@@ -5,8 +5,8 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    emacs-overlay.url = "github:nix-community/emacs-overlay/23c8464f4527a2b19f6b4776378dd03b8289aa85";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    emacs-overlay.url = "github:nix-community/emacs-overlay/master";
     nixpkgs-stable.url = "nixpkgs/nixos-21.05";
   };
 

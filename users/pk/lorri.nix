@@ -4,7 +4,6 @@
     enableZshIntegration = true;
     nix-direnv = {
       enable = true;
-      enableFlakes = true;
     };
   };
   services.lorri.enable = true;
