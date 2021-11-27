@@ -4,6 +4,6 @@
     enableExtensionPack = true;
     enableHardening = true;
   };
-  virtualisation.dokcer.enable = true;
+  virtualisation.docker.enable = true;
   users.users.pk.extraGroups = [ "dokcer" ];
 }
