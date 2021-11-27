@@ -23,6 +23,7 @@ in {
     alsa-utils
     spotify
     brave
+    zotero
   ];
   fonts.fonts = with pkgs; [ nerdfonts ];
 }
