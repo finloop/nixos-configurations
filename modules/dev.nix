@@ -30,5 +30,6 @@
     rclone
     wget
     curl
+    jetbrains.pycharm-community
   ];
 }
