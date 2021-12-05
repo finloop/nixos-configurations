@@ -4,6 +4,10 @@
     enableExtensionPack = true;
     enableHardening = true;
   };
-  virtualisation.docker.enable = true;
-  users.users.pk.extraGroups = [ "dokcer" ];
+  virtualisation.docker = {
+   enable = true;
+   enableNvidia = true;
+  };
+  users.users.pk.extraGroups = [ "docker" ];
+  systemd.enableUnifiedCgroupHierarchy = false;
 }

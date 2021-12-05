@@ -11,14 +11,14 @@ in
 {
   # NVIDIA DRIVERS AND OFFLOAD
   environment.systemPackages = [ nvidia-offload ];
-  hardware.nvidia.modesetting.enable = false;
+  hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.nvidiaPersistenced = true;
 
   # XSERVER CONFIG
   services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
-    desktopManager = { 
+    desktopManager = {
       xterm.enable = false;
       plasma5.enable = true;
       plasma5.runUsingSystemd = true;
@@ -48,7 +48,23 @@ in
     nvidiaBusId = "PCI:1:0:0";
   };
 
+  #hardware.bumblebee.enable = true;
+
   # ENABLE XWAYLAND
   programs.xwayland.enable = true;
+
+  xdg = {
+  portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
+    gtkUsePortal = true;
+  };
+  };
+
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true;
 
 }
