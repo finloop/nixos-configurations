@@ -25,6 +25,7 @@
     lshw
     pciutils
     obsidian
+    discord
   ];
 
 }

@@ -10,7 +10,7 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "nvidia" ];
-  boot.kernelModules = [ "kvm-amd" "nvidia_x11"];
+  boot.kernelModules = [ "kvm-amd" "nvidia_x11" "nvidia_drm"];
   boot.extraModulePackages = [ ];
   boot.blacklistedKernelModules = [ "nouveau" ];
   boot.kernelParams = [ "pci=noats" ];
@@ -32,6 +32,7 @@
 
   swapDevices = [ ];
 
-  hardware.system76.enableAll = true;
+  #hardware.system76.enableAll = true;
+
 
 }

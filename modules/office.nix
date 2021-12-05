@@ -16,7 +16,7 @@ in {
     thunderbird-bin-91
     birdtray
     teams
-    kotatogram-desktop
+    tdesktop
     pcmanfm
     pavucontrol
     pamixer
