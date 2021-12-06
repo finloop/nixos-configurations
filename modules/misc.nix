@@ -26,6 +26,7 @@
     pciutils
     obsidian
     discord
+    restic
   ];
 
 }
