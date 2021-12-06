@@ -8,7 +8,7 @@
   services.restic.backups = {
     b2 = {
       paths = [ "/home/pk/Projects" ];
-      repository = "rclone:b2:pk-home-backup";
+      repository = "rclone:b2:pk-backup-home";
       initialize = true;
       passwordFile = config.age.secrets.restic.path;
       timerConfig = {
