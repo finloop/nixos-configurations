@@ -26,8 +26,11 @@
   #     port = 22;
   #   }];
   # };
+
+  programs.ssh.startAgent = true;
+
   programs.gnupg.agent = {
     enable = true;
-    enableSSHSupport = true;
+    enableSSHSupport = false;
   };
 }
