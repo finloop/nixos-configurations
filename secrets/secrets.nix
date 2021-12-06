@@ -6,5 +6,6 @@ let
   systems = [ acer ];
 in
 {
-  "secret1.age".publicKeys = [ users systems ];
+  "rclone.age".publicKeys = [ pk acer ];
+  "restic.age".publicKeys = [ pk acer ];
 }

@@ -8,10 +8,11 @@
     emacs-overlay.url = "github:nix-community/emacs-overlay/23c8464f4527a2b19f6b4776378dd03b8289aa85";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixpkgs-stable.url = "nixpkgs/nixos-21.05";
+    agenix.url = "github:ryantm/agenix";
   };
 
   outputs =
-    inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixpkgs-stable, emacs-overlay,... }:
+    inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixpkgs-stable, agenix, emacs-overlay,... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -59,6 +60,10 @@
             ./modules/virt.nix
             ./modules/cache.nix
             ({ nixpkgs.overlays = [ inputs.emacs-overlay.overlay ]; })
+            agenix.nixosModules.age {
+              age.secrets.rclone.file = ./secrets/rclone.age;
+              age.secrets.restic.file = ./secrets/restic.age;
+            }
           ];
         };
       };
