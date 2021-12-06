@@ -15,19 +15,17 @@
 
   # SSH
 
-  #programs.ssh.startAgent = true;
-  # services.openssh = {
-  #   enable = true;
-  #   allowSFTP = false;
-  #   passwordAuthentication = false;
-  #   permitRootLogin = "no";
-  #   listenAddresses = [{
-  #     addr = "100.79.65.104";
-  #     port = 22;
-  #   }];
-  # };
-
   programs.ssh.startAgent = true;
+  services.openssh = {
+     enable = true;
+     allowSFTP = false;
+     passwordAuthentication = false;
+     permitRootLogin = "no";
+     listenAddresses = [{
+       addr = "localhost";
+       port = 22;
+     }];
+  };
 
   programs.gnupg.agent = {
     enable = true;
