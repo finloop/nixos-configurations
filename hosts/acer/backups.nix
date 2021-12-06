@@ -25,16 +25,16 @@
 
       extraBackupArgs = [
         "--exclude-caches"
-        "--exclude=/home/pk/.conda"
-        "--exclude=/home/pk/.npm"
-        "--exclude=/home/pk/.local"
-        "--exclude=/home/pk/bin"
-        "--exclude=/home/pk/Desktop"
-        "--exclude=/home/pk/Downloads"
-        "--exclude=/home/pk/miniconda3"
-        "--exclude=/home/pk/Videos"
-        "--exclude=/home/pk/VirtualBox VM"
-        "--exclude=/home/pk/.jupyter"
+        "--exclude='/home/pk/.conda'"
+        "--exclude='/home/pk/.npm'"
+        "--exclude='/home/pk/.local'"
+        "--exclude='/home/pk/bin'"
+        "--exclude='/home/pk/Desktop'"
+        "--exclude='/home/pk/Downloads'"
+        "--exclude='/home/pk/miniconda3'"
+        "--exclude='/home/pk/Videos'"
+        "--exclude='/home/pk/VirtualBox VM'"
+        "--exclude='/home/pk/.jupyter'"
       ];
 
       rcloneConfigFile = config.age.secrets.rclone.path;
