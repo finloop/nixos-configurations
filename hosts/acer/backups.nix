@@ -33,7 +33,7 @@
         "--exclude='/home/pk/Downloads'"
         "--exclude='/home/pk/miniconda3'"
         "--exclude='/home/pk/Videos'"
-        "--exclude='/home/pk/VirtualBox VM'"
+        "--exclude='/home/pk/VirtualBox VMs'"
         "--exclude='/home/pk/.jupyter'"
       ];
 

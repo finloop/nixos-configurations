@@ -14,7 +14,6 @@
   nix.trustedUsers = [ "root" "pk" ];
 
   # SSH
-
   programs.ssh.startAgent = true;
   services.openssh = {
      enable = true;

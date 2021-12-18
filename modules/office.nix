@@ -24,6 +24,8 @@ in {
     spotify
     brave
     zotero
+    slack
+    zoom-us
   ];
   fonts.fonts = with pkgs; [ nerdfonts ];
 }

@@ -7,6 +7,7 @@
     networkmanager
     networkmanagerapplet
   ];
+  nixpkgs.config.allowUnfree = true;
   programs.mtr.enable = true;
   users.mutableUsers = true;
   users.users.pk = {
