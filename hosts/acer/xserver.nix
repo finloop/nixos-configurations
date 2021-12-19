@@ -18,16 +18,11 @@ in
   services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
-    desktopManager = {
-      xterm.enable = false;
-      plasma5.enable = true;
-      plasma5.runUsingSystemd = true;
-    };
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "none+qtile";
-    };
-    windowManager.qtile.enable = true;
+
+    # GNOME
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+
     layout = "pl";
     # xkbOptions = "caps:swapescape";
     libinput = {
@@ -38,7 +33,7 @@ in
       };
       mouse = { accelProfile = "flat"; };
     };
-  }; 
+  };
 
   # ENABLE NVIDIA PRIME
   hardware.nvidia.prime = {
@@ -50,15 +45,11 @@ in
 
   #hardware.bumblebee.enable = true;
 
-  # ENABLE XWAYLAND
-  programs.xwayland.enable = true;
-
   xdg = {
   portal = {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-wlr
-      xdg-desktop-portal-gtk
     ];
     gtkUsePortal = true;
   };
