@@ -7,8 +7,8 @@
 
 #+begin_center
 | *Shell*    | zsh        |
-| *DM*       | lightdm    |
-| *WM*       | qtile/plasma      |
+| *DM*       | gdm        |
+| *WM*       | gnome             |
 | *Editor*   | nvim |
 | *Terminal* | Alacritty  |
 | *Launcher* | rofi       |
@@ -18,27 +18,16 @@
 
 * TODOs
 ** PROJ General
-*** TODO Move all of the configs into literates (preferably into this file)
-*** TODO Fix colors to be defined in one file instead of every themed app
-*** TODO Set up logging in with password + U2F key
-*** TODO Set up "panic password" which deletes all of =/home/=
-** PROJ WM
-*** TODO Add qtile config into this directory to make it more manageable
+*** Autmaticaly setup second monitor with xrandr
+** PROJ GNOME
 *** TODO set background with Nix
+*** TODO enable gnome extensions with dconf
 ** PROJ Shell
-*** TODO configure ZSH via nix file
-There's no use to use prezto
-*** DONE configure neovim
 *** TODO configure git
-*** DONE configure gh
 *** TODO configure ssh
-*** DONE configure lsd
-** PROJ Emacs
-*** TODO Learn Emacs
 ** PROJ NixOS
-*** DONE Set up automatic GC with ~2 weeks of generations
-*** TODO Set up backups properly
-*** TODO Set up agenix secrets
+*** DONE Set up backups properly
+*** DONE Set up agenix secrets
 * Requirements
 1. NixOS
 2. FLakes enabled
