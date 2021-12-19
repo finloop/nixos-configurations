@@ -27,6 +27,7 @@
     obsidian
     discord
     restic
+    openssl
   ];
 
 }
