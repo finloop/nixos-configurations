@@ -21,7 +21,7 @@
     youtube-dl
     freetube
     calibre
-    spectacle
+    flameshot
     lshw
     pciutils
     obsidian
