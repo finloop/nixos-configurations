@@ -28,6 +28,8 @@
     discord
     restic
     openssl
+    gparted
+    openboard
   ];
 
 }
