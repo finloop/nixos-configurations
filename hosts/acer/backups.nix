@@ -14,7 +14,7 @@
       initialize = true;
       passwordFile = config.age.secrets.restic.path;
       timerConfig = {
-        OnCalendar = "00:05";
+        OnCalendar = "00/3:00";
       };
       pruneOpts = [
         "--keep-daily 7"
